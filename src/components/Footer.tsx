@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 import { useI18n } from "@/lib/i18n";
 import type { TranslationKey } from "@/data/translations";
 
-const links: { to: LinkProps["to"]; key: TranslationKey }[] = [
+const links: { to: NonNullable<LinkProps["to"]>; key: TranslationKey }[] = [
   { to: "/", key: "nav.home" },
   { to: "/story", key: "nav.story" },
   { to: "/collections", key: "nav.collections" },

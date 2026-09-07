@@ -117,7 +117,7 @@ export function WhyChooseUs() {
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((n, i) => {
-            const Icon = whyIcons[i];
+            const Icon = whyIcons[i]!;
             return (
               <div key={n} className="rounded-xl border border-primary-foreground/15 p-6">
                 <Icon className="h-6 w-6 text-gold" />

@@ -20,7 +20,7 @@ export function ButtonLink({
   className,
   children,
 }: {
-  to: LinkProps["to"];
+  to: NonNullable<LinkProps["to"]>;
   variant?: keyof typeof buttonStyles;
   className?: string;
   children: ReactNode;
