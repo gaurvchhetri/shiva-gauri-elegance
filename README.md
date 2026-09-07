@@ -27,3 +27,12 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+
+## Shiva Gauri Traders — prototype notes
+
+- Products & categories: `src/data/products.ts` (photos, names, prices, sizes, colours, descriptions, `featured` / `newArrival` flags).
+- Business details (address, phone/WhatsApp, opening-hours placeholder): `src/data/site.ts`.
+- All English + Nepali interface text: `src/data/translations.ts`.
+- Photos live in `src/assets/` — replace the files (keeping the names) to swap in real catalog images.
+- Fully static: `bun run build` outputs prerendered HTML to `dist/client`.
+- GitHub Pages: `.github/workflows/deploy.yml` builds with `BASE_PATH=/<repo-name>/`, uploads the build as an artifact and deploys to Pages.
