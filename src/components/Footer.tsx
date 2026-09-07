@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, type LinkProps } from "@tanstack/react-router";
 import { MapPin, Phone, Clock } from "lucide-react";
 
 import { Brand } from "@/components/Navbar";
@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 import { useI18n } from "@/lib/i18n";
 import type { TranslationKey } from "@/data/translations";
 
-const links: { to: string; key: TranslationKey }[] = [
+const links: { to: LinkProps["to"]; key: TranslationKey }[] = [
   { to: "/", key: "nav.home" },
   { to: "/story", key: "nav.story" },
   { to: "/collections", key: "nav.collections" },

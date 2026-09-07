@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, type LinkProps } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
@@ -20,7 +20,7 @@ export function ButtonLink({
   className,
   children,
 }: {
-  to: string;
+  to: LinkProps["to"];
   variant?: keyof typeof buttonStyles;
   className?: string;
   children: ReactNode;
