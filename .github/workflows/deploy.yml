@@ -37,21 +37,21 @@ jobs:
 
       - name: Prepare static output
         run: |
-          cp -r .output/public dist
-          touch dist/.nojekyll
+          cp -r dist/client site
+          touch site/.nojekyll
           # SPA fallback so deep links and refreshes never 404 on GitHub Pages
-          cp dist/index.html dist/404.html
+          cp site/index.html site/404.html
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: static-site
-          path: dist
+          path: site
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: site
 
   deploy:
     needs: build
